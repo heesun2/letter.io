@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <style type="text/css">
+      
+        /* link - 아직 클릭하지 않은 경우 red 색상 설정 */
+        a:link { color: rgb(255, 255, 255); text-decoration: none;}	
+        /* visited - 한번 클릭하거나 전에 클릭한적 있을 경우 #c71d44 설정 */
+        a:visited { color: #ffffff; text-decoration: none;}	
+        /* hover - 마우스를 해당 링크에 위치했을 경우 #006DD7 설정 */
+        a:hover { color: #8b8b8b; text-decoration: underline;}
+        #login-form a {text-decoration: none;}
+        
+       </style> 
+       
+      <style>
+         * {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #666666;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
+
+
+      </style>
+   </head>
+   
+   <body>
+    <a href ="을지로.html" target="_blank">
+    <div class="timeline">
+      <div class="container left">
+        <div class="content">
+          <h2>을지로</h2>
+          <p>친구들과 놀기 좋아하며
+          이상한 겉멋이 들어버렸다.
+          이후 을지로가 지루해진 나머지 다른 장소로 아지트를 옮긴다.</p>
+        </div>
+      </div>
+    </a>
+    <a href ="강남.html" target="_blank">
+      <div class="container right">
+        <div class="content">
+          <h2>강남</h2>
+          <p>그렇게 강남으로 아지트를 옮긴 고양이는 이상한 겉멋 때문인지 능력있는 고양이라고 소문이 났다. 이쪽에서는 조금 먹히나보다.더 많은 친구들이 생겼다.</p>
+        </div>
+      </div>
+      </a>
+      <a href ="한강가.html" target="_blank">
+      <div class="container left">
+        <div class="content">
+          <h2>한강가</h2>
+          <p>고양이는 가장 친한 친구와 종종 저녁에 한강에서 맥주를 즐기는 편이다. 술이 약해 힘들지만 겉멋을 위해 술에 쎈 척을 해본다.</p>
+        </div>
+      </div>
+      </a>
+      <a href ="충무로.html" target="_blank">
+      <div class="container right">
+        <div class="content">
+          <h2>충무로</h2>
+          <p>많은 친구를 사겼지만 더이상의 떠돌이 생활은 힘들다. 친구에게 들어보니 집사라는게  있다고 한다. 고양이는 그걸 갖고싶어한다. 그렇게 간택할 집사를 찾아다니고자 이곳을 떠난다.</p>
+        </div>
+      </div>
+      </a>
+      <a href ="호텔.html" target="_blank">
+      <div class="container left">
+        <div class="content">
+          <h2>호텔</h2>
+          <p>이 근처에는 집사로 쓸만한 사람이 많아보인다. 정성껏 인기많은 고양이라는것을 어필하며 집사를 고르는 고양이다. 곧 집사가 생길것같은 분위기다.</p>
+        </div>
+      </div>
+      </a>
+      <a href ="머리맡.html" target="_blank">
+      <div class="container right">
+        <div class="content">
+          <h2>머리맡</h2>
+          <p>집사 간택에 성공했다. 흙먼지 날리는 길바닥 생활이 아닌 집사 머리맡에서 살게됐다. 이제는 집사를 이용하여 더 특별한 고양이가 되는게 목표다. </p>
+        </div>
+      </div>
+      </a>
+    </div>
+   </body>
+   <body>
+
+    <div class="bg-image"></div>
+    
+  
+    
+    </body>
+</html>

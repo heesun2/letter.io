@@ -1,0 +1,55 @@
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+function loadMapsJSAPI() {
+  const googleMapsAPIKey = 'YOUR API KEY';
+  const googleMapsAPIURI = `https://maps.googleapis.com/maps/api/js?key=${googleMapsAPIKey}&callback=runApp`;
+}
+function runApp() {
+  console.log('Maps JS API loaded');
+}
+const script = document.createElement('script');
+script.src = googleMapsAPIURI;
+script.defer = true;
+script.async = true;
+window.runApp = runApp;
+document.head.appendChild(script);
+loadMapsJSAPI();
+loadMapsJSAPI();
+function runApp() {
+  console.log('Maps JS API loaded');
+}
+
+function loadMapsJSAPI(googleMapsAPIKey) {
+  const googleMapsAPIKey = 'YOUR API KEY';
+  const googleMapsAPIURI = `https://maps.googleapis.com/maps/api/js?key=${googleMapsAPIKey}&callback=runApp`;
+
+  const script = document.createElement('script');
+  script.src = googleMapsAPIURI;
+  script.defer = true;
+  script.async = true;
+
+  window.runApp = runApp;
+
+  document.head.appendChild(script);
+}
+function displayMap() {
+  const mapOptions = {
+    center: { lat: -33.860664, lng: 151.208138 },
+    zoom: 14
+  };
+}
+<div id="map"></div>
+const mapDiv = document.getElementById('map');
+  const map = new google.maps.Map(mapDiv, mapOptions);
+  return map;
+  function runApp() {
+  console.log('Maps JS API loaded');
+  const map = displayMap();
+}
+function displayMap() {
+  const mapOptions = {
+    center: { lat: -33.860664, lng: 151.208138 },
+    zoom: 14
+  };
+  const mapDiv = document.getElementById('map');
+  return new google.maps.Map(mapDiv, mapOptions);
+}
